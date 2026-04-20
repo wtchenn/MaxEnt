@@ -24,7 +24,7 @@ end
 % For large-scale networks, we use this filter to normalize the error
 % Error_Normalizer = [ones(N,1);ones(N,1)];
 % MAX_ERROR = 0.02;
-MAX_ERROR = 0.000000000001;
+MAX_ERROR = 10^(-9);
 
 %%% Count the number of complete constraints
 
