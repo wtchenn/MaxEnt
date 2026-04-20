@@ -12,8 +12,8 @@ The estimator infers flow dynamics using the network structure matrix (A) and ob
 
 ```
 % A demo
-A = [0 0 1; 0 0 1; 0 0 0 ]；% Avaliable links are: 1->3, 2->3
-N = [2 3 4];
+A = [0 0 1; 0 0 1; 0 0 0 ]; % Avaliable links are: 1->3, 2->3
+N = [2 3 4]; % Counts at sensors: Sensor#1 -> 2 counts, #2 -> 3 counts, #3 -> 4 counts
 [P_M,O,D,flag_global,count_modified,error] = my_estimate_p_newton_new(A,N)
 ```
 The output:
