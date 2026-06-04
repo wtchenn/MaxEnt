@@ -23,7 +23,7 @@ The output:
 
 Hyperparameters and designings for initial guess:
 - The solver is built on Newton's methods, so there are hyper-paramters that require suitable setting especially when handling large-scale systems.
-- To aviod the algorithm being trapped by bad inital guess, we desgin a three-stage solver. The constraints are modified a bit at the beginning, gradually guiding the solver to the solution.
+- To aviod the algorithm being trapped by bad inital guess, we desgin a three-stage solver. The constraints are modified a bit at the beginning, gradually guiding the solver to the solution. Known as homotopy algorithms.
 
 ## 🪶 Main features & assumpuions
 * The Core Problem: Pedestrian counts (e.g., the number of people crossing a specific line on a road) are often collected sparsely around a city. Our goal is to infer global, city-scale movement trajectories from these localized observations.
