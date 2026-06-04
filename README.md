@@ -21,6 +21,10 @@ The output:
 - ``O``(Vector): Departure rates. The value $N_i \times O_i$ represents the estimated number of pedestrians directly leaving the system from place $i$. Equivalently, this is the portion of the count that departs without being detected by another sensor.
 - ``D``(a vector): Arrival rates. The value $N_i \times D_i$ represents the estimated number of pedestrians arriving at place $i$. Equivalently, this is the portion of the count that arrived without prior detection.
 
+Hyper-parameters and designings for inital guess:
+- The solver is built on Newton's methods, so there are hyper-paramters that require suitable setting especially when handling large-scale systems.
+- To aviod the algorithm being trapped by bad inital guess, we desgin a three-stage solver. The constraints are modified a bit at the beginning, gradually guiding the solver to the solution.
+
 ## 🪶 Main features & assumpuions
 * The Core Problem: Pedestrian counts (e.g., the number of people crossing a specific line on a road) are often collected sparsely around a city. Our goal is to infer global, city-scale movement trajectories from these localized observations.
 * An Under-Determined System: Even as the number of sensors available to collect data increases, inferring exact dynamics from point counts remains an under-determined problem. This means there are multiple feasible movement systems that could align with the observed data.
